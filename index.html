@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width-device-width,initial-scale=1.0">
+            <title>Timeline App</title>
+            <link rel="stylesheet" href="style.css">
+            </head>
+            <body>
+                <header>
+                    <div>
+                        <class="logo">Timeline App</div>
+                        <button id="theme-toggle" aria-label="Toggle theme">🌓</button> 
+                </header>
+                <nav>
+                    <!----->
+                    </nav>
+                    <main>
+                         <!-- Timeline Navigation Bar -->
+    <div id="timeline-nav">
+      <div class="nav-line"></div>
+      <div class="nav-dot" style="left: 0%;" data-year="1900"><span class="nav-year">1900</span></div>
+      <div class="nav-dot blue" style="left: 20%;" data-year="1910"><span class="nav-year">1910</span></div>
+      <div class="nav-dot blue" style="left: 40%;" data-year="1920"><span class="nav-year">1920</span></div>
+      <div class="nav-dot blue" style="left: 60%;" data-year="1930"><span class="nav-year">1930</span></div>
+      <div class="nav-dot blue" style="left: 80%;" data-year="1940"><span class="nav-year">1940</span></div>
+      <div class="nav-dot" style="left: 100%;" data-year="1997"><span class="nav-year">1997</span></div>
+    </div>
+                       
+                        <section id="timeline">
+                            <div class="timeline-event">
+                                <span class="year">1997</span>
+                                <div class="event-content">
+                                    <h2>Introduction of the First Personal Computer</h2>
+                                    <figure>
+                                        <img src="https://oldcomputers.net/pics/appleii-system.jpg" alt="First Personal Computer" />
+                                    </figure>
+                                    <p class="description">
+                                         The first personal computer, introduced in 1977,revolutionized the way people interacted with technology. 
+                                         These early systems were more affordable,
+                                         paving the way for the digital age and transforming various industries.
+                                    </p> 
+                                    <button class="learn-more">Learn More</button>
+
+                                </div>
+                            </div>
+                        </section>
+                        <div id="modal"></div>
+                    </main>
+                    <script>
+                        // Manual theme toggle(switches dark/light mode)
+                        const toggle = document.getElementById('theme-toggle');
+                        toggle.addEventListener('click',() =>{
+                            document.body.classList.toggle('dark');
+                        }) ; 
+
+                    </script>
+                </nav>
+                    </div>
+                </header>
+            </body>
+       
+         </neta>
+    </head>
+</html>
