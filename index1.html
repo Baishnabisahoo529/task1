@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Timeline App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <div class="logo">Timeline App</div>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      </div>
+    </header>
+
+    <!-- Optional Nav -->
+    <nav></nav>
+
+    <main>
+      <!-- TIMELINE NAVIGATION BAR -->
+      <div id="timeline-nav">
+        <div class="nav-line"></div>
+        <div class="nav-dot" style="left: 0%;" data-year="1900">
+          <span class="nav-year">1900</span>
+        </div>
+        <div class="nav-dot blue" style="left: 20%;" data-year="1910">
+          <span class="nav-year">1910</span>
+        </div>
+        <div class="nav-dot blue" style="left: 40%;" data-year="1920">
+          <span class="nav-year">1920</span>
+        </div>
+        <div class="nav-dot blue" style="left: 60%;" data-year="1930">
+          <span class="nav-year">1930</span>
+        </div>
+        <div class="nav-dot blue" style="left: 80%;" data-year="1940">
+          <span class="nav-year">1940</span>
+        </div>
+        <div class="nav-dot" style="left: 100%;" data-year="1997">
+          <span class="nav-year">1997</span>
+        </div>
+      </div>
+
+      <!-- TIMELINE EVENTS -->
+      <section id="timeline" class="timeline">
+        <!-- Example Event -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="year">1997</span>
+            <h2>Introduction of the First Personal Computer</h2>
+            <figure>
+              <img
+                src="https://oldcomputers.net/pics/appleii-system.jpg"
+                alt="First Personal Computer"
+              />
+            </figure>
+            <p class="description">
+              The first personal computer, introduced in 1977, revolutionized
+              the way people interacted with technology. These early systems
+              were more affordable, paving the way for the digital age and
+              transforming various industries.
+            </p>
+            <button class="learn-more">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Add more .timeline-item blocks here -->
+      </section>
+
+      <!-- MODAL -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close" id="modal-close" aria-label="Close modal">&times;</span>
+          <h2>Event Details</h2>
+          <p>More information about this event will go here...</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script>
+      // Theme toggle
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      // Open modal on "Learn More" click
+      document.querySelectorAll('.learn-more').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.getElementById('modal').classList.add('active');
+        });
+      });
+
+      // Close modal events
+      document.getElementById('modal-close').addEventListener('click', () => {
+        document.getElementById('modal').classList.remove('active');
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('modal')) {
+          document.getElementById('modal').classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>
