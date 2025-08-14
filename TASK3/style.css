@@ -1,0 +1,282 @@
+/* top navigation bar */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.35em;
+  font-weight: bold;
+}
+
+#theme-toggle {
+  background: #ececec;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+/* timeline container box */
+.timeline-wrapper {
+  background: #fff;
+  padding: 20px;
+  margin: 25px auto;
+  border-radius: 18px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  max-width: 620px;
+  width: 94vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* scrollable horizontal section */
+#timeline {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 14px 0;
+  scroll-snap-type: x mandatory;
+  align-items: stretch;
+}
+
+#timeline::-webkit-scrollbar {
+  height: 9px;
+}
+#timeline::-webkit-scrollbar-thumb {
+  background: #1a6dc9;
+  border-radius: 5px;
+}
+#timeline::-webkit-scrollbar-thumb:hover {
+  background: #155a9f;
+}
+
+/* navigation bar for years */
+#timeline-nav {
+  position: relative;
+  height: 58px;
+  margin-bottom: 20px;
+}
+
+#timeline-nav .nav-line {
+  background: #1a6dc9;
+  opacity: 0.25;
+  height: 3px;
+  border-radius: 2px;
+  width: 88%;
+  left: 6%;
+  top: 30px;
+  position: absolute;
+}
+
+.nav-dot {
+  width: 18px;
+  height: 18px;
+  background: #e8e8e8;
+  border: 2px solid #b0b7cc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 19px;
+  transform: translateX(-50%);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.nav-dot.blue {
+  background: #1a6dc9;
+  border-color: #1a6dc9;
+}
+
+.nav-dot .nav-year {
+  font-size: 0.92em;
+  font-weight: 500;
+  color: #3b4252;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-dot.blue .nav-year {
+  color: #1a6dc9;
+  font-weight: bold;
+}
+
+/* each event card */
+.timeline-event {
+  flex: 0 0 260px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  scroll-snap-align: start;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.timeline-event .year {
+  font-weight: bold;
+  color: #1a6dc9;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.timeline-event h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.05em;
+}
+
+.timeline-event figure {
+  margin: 0 0 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-event img {
+   width: 120px;         
+  height: 120px;       
+  object-fit: cover;   
+  border-radius: 0.7em;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.13);
+  display: block;
+  margin: 0 auto;
+}
+
+.learn-more {
+  background: #1a6dc9;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+  display: block;
+  margin-top: auto;
+}
+.learn-more:hover {
+  background: #155a9f;
+}
+
+/* popup overlay */
+#modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 999;
+}
+
+/* popup box */
+.modal-content {
+  background: #fff;
+  padding: 16px;
+  margin: 60px auto;
+  border-radius: 12px;
+  width: 82%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 78px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #1a6dc9;
+}
+
+/* dark mode styles */
+body.dark {
+  background: #181c24;
+  color: #e5e8ed;
+}
+
+body.dark header {
+  background: #23283a;
+}
+
+body.dark .timeline-wrapper,
+body.dark .timeline-event,
+body.dark .modal-content {
+  background: #222735;
+  color: #fff;
+}
+
+body.dark .learn-more {
+  background: #3788d8;
+}
+
+/* responsive tweaks */
+
+/* larger tablets */
+@media (max-width: 1050px) {
+  .timeline-wrapper {
+    max-width: 90vw;
+    padding: 14px;
+  }
+  #timeline-nav .nav-line {
+    width: 86%;
+    left: 7%;
+  }
+  .nav-dot {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* mobile + small tablets */
+@media (max-width: 770px) {
+  header {
+    padding: 10px 16px;
+  }
+  .logo {
+    font-size: 1.25em;
+  }
+  #theme-toggle {
+    font-size: 1em;
+    padding: 4px 10px;
+  }
+  .timeline-event {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+  .modal-content {
+    width: 90%;
+    margin: 80px auto;
+  }
+}
+
+/* small phones */
+@media (max-width: 500px) {
+  .timeline-event {
+    flex: 0 0 92%;
+    max-width: 92%;
+  }
+  .timeline-event h2 {
+    font-size: 1em;
+  }
+  .nav-dot .nav-year {
+    font-size: 0.74em;
+  }
+}

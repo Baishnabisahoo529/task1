@@ -1,0 +1,56 @@
+[
+  {
+    "year": "1960",
+    "title": "Invention of thr laser",
+    "description": "The laser was invented in 1960,revolutionizing optics and communication",
+    "imageURL": "https://www.lasitlaser.com/wp-content/uploads/2019/07/1457-.jpg",
+    "category": "Technology"
+  },
+
+  {
+    "year": "1977",
+    "title": "Apple II Released",
+    "description": "The laser was invented in 1960,revolutionizing optics and communication",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Apple_II-IMG_7064.jpg",
+    "category": "Computing"
+  },
+   {
+    "year": "1989",
+    "title": "World Wide Web Proposed",
+    "description": "Tim Berners-Lee proposed the World Wide Web in 1989",
+    "imageURL": "https://media.npr.org/assets/img/2023/04/27/gettyimages-167798468_custom-37990320dae8dd8c37e56fb15f50b805ec3d3ed9.jpg",
+    "category": "Internet"
+
+   },
+ {
+    "year": "2000",
+    "title": "Human Genome Project Draft",
+    "description": "The first draft of the human genome was completed in 2000. ",
+    "imageURL": "https://cdn.slidesharecdn.com/ss_thumbnails/humangenomeproject-141104093604-conversion-gate02-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "category": "Science"
+   
+  },
+
+  {
+   "year": "2007",
+   "title": "iphone Announcement",
+   "desription": "Apple announced the first iphone in 2007,changing the smartphone industry",
+   "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7zV16EZVeJ20pE8-wkoaBNwPl0JbrTku4A&s",
+   "category": "Moblie"
+  },
+  {
+    "year": "2012",
+    "title": "Curiosity Rover on Mars",
+    "description": "NASA's Curiosity Rover landed on Mars to study climate and geology.",
+    "imageURL": "https://www.datocms-assets.com/117510/1722389708-slh_news34_curiosity_rover_original.jpg",
+    "category": "Space"
+  },
+  {
+    "year": "2020",
+    "title": "First Image of a Black Hole",
+    "description": "Astronomers captured the first-ever image of a black hole.",
+    "imageURL": "https://cdn.mos.cms.futurecdn.net/MXoF27JXPhGA8ag69EzENa-1200-80.jpg",
+    "category": "Science"
+  }
+
+]
