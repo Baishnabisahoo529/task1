@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Timeline App</div>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button> 
+  </header>
+
+  <nav>
+    <!-- Placeholder for future filters -->
+  </nav>
+
+  <main>
+    <div class="timeline-wrapper">
+
+      <!-- Timeline Navigation Bar -->
+      <div id="timeline-nav">
+        <div class="nav-line"></div>
+        <div class="nav-dot" style="left: 0%;" data-year="1960"><span class="nav-year">1960</span></div>
+        <div class="nav-dot blue" style="left: 20%;" data-year="1977"><span class="nav-year">1977</span></div>
+        <div class="nav-dot blue" style="left: 40%;" data-year="1989"><span class="nav-year">1989</span></div>
+        <div class="nav-dot blue" style="left: 60%;" data-year="1997"><span class="nav-year">1997</span></div>
+        <div class="nav-dot" style="left: 80%;" data-year="2007"><span class="nav-year">2007</span></div>
+        <div class="nav-dot" style="left: 100%;" data-year="2020"><span class="nav-year">2020</span></div>
+      </div>
+
+      <!-- Timeline events (dynamic from JSON) -->
+      <section id="timeline"></section>
+    </div>
+
+    <!-- Modal for event details -->
+    <div id="modal"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
